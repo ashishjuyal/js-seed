@@ -3,12 +3,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import HappyPack from 'happypack';
 
 const assetPath = require('path').join(__dirname, 'dist');
-const serverENV = process.env.NODE_ENV ? process.env.NODE_ENV : 'local';
 const resolve = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
     unsafeCache: true
-  },
+  }
 };
 
 const lintLoaders = {
@@ -36,7 +35,7 @@ const plugins = {
       inject: 'body'
     }),
     new HappyPack({ id: 'js' })
-  ],
+  ]
 };
 
 const development = {
@@ -52,7 +51,7 @@ const development = {
   devtool: 'eval',
   entry: [
     'webpack-hot-middleware/client',
-    './src/main.js',
+    './src/main.js'
   ],
   stats: {
     colors: true,
@@ -66,17 +65,14 @@ const development = {
       ...jsLoaders,
       query: {
         plugins: [
-          ["transform-decorators-legacy"],
+          ['transform-decorators-legacy'],
           ['transform-object-rest-spread'],
-          ['transform-class-properties'],
+          ['transform-class-properties']
         ]
       }
-    },
-      ...loaders
-    ]
+    }]
   },
-
   plugins: plugins.development
 };
 
-export { development }
+export { development };
