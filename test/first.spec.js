@@ -1,7 +1,7 @@
-const expect = require('expect.js');
+const expect = require('expect');
 
 describe('first', () => {
   it('should test', () => {
-    expect(1).to.be(1);
+    expect(1).toBe(1);
   });
 });
