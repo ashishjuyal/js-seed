@@ -1,7 +1,7 @@
 {
-  "name": "flatten",
+  "name": "seed",
   "version": "0.0.1",
-  "description": "TDD example for flatten data",
+  "description": "JS seed project",
   "repository": "",
   "author": "Ashish Juyal <ajuyal@xebia.com>",
   "scripts": {
